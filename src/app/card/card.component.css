@@ -1,0 +1,30 @@
+.container{
+    margin: auto;
+}
+
+.row{
+    margin: auto;
+    margin-top: 10px;
+}
+.col{
+    padding: 10px;
+}
+
+.card{
+    min-width: 200px;
+    margin: 2px;
+    color: white;
+}
+
+.btn{
+    margin-left: 2px;
+}
+
+.card-body{
+    background-color: #fee;
+    color: black;
+}
+
+.custom-select{
+    margin-left: 2px;
+}

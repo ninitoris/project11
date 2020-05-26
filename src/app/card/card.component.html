@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col" *ngFor="let Cards of Cards">
+      <div class="card" >
+        <div class="card-header" [style.background-color]="Cards.color">
+          <h4 class="card-title">Card №{{ Cards.cardId }}</h4>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Card's name: {{Cards.name}}</p>
+          <a href="#" class="btn btn-dark" (click)="delete(Cards.cardId)">Delete</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-md-center">
+    <input type="text" class="form-control" placeholder="Enter card name" id="Name" #Name style="width:150px" value="Name">
+    <select class="custom-select" id="Color" #Color style="width:150px">
+      <option value="green">Green</option>
+      <option value="red">Red</option>
+    </select>
+    <button class="btn btn-success" (click)="addCard(Name.value,Color.value)">Add card</button>
+    <button class="btn btn-danger" (click)="deleteAll()">Delete All</button>    
+  </div>
+</div>
